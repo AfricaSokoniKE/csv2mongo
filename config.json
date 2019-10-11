@@ -1,0 +1,46 @@
+{
+	"validationRules": [
+		{
+			"column": "productTitle",
+			"type": "STRING",
+			"required": true,
+			"unique": false,
+			"saveAs": ""
+		},
+		{
+			"column": "productPrice",
+			"type": "NUMBER",
+			"required": false,
+			"unique": false,
+			"saveAs": "price"
+		},
+		{
+			"column": "productPice2",
+			"type": "NUMBER",
+			"required": false,
+			"unique": false,
+			"saveAs": "otherPrice"
+		},
+		{
+			"column": "sku",
+			"type": "STRING",
+			"required": false,
+			"unique": true,
+			"saveAs":""
+		}
+	],
+	"bulkSize": 2,
+	"mongoDB": {
+		"databaseName": "csv2mongo",
+		"host": "127.0.0.1",
+		"port": 27017,
+		"username": "",
+		"password": "",
+		"collections": {
+			"mainCollection": "mainCollection",
+			"uploadHistory": "uploadHistory"
+		}
+	},
+	"serverPort": 8060,
+	"server": "http://127.0.0.1:8060/"
+}
